@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Pets.Api.models
+namespace Pets.Api.Models
 {
   public class Product
   {
