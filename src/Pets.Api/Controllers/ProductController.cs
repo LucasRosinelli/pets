@@ -54,6 +54,13 @@ namespace Pets.Api.Controllers
         return this.BadRequest();
       }
 
+      var dbProduct = await this._context.Products.FindAsync(id);
+
+      if (dbProduct == null)
+      {
+        return this.NotFound();
+      }
+
       this._context.Entry(product).State = EntityState.Modified;
       await this._context.SaveChangesAsync();
 
